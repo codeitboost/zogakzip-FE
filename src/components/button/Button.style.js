@@ -9,7 +9,7 @@ export const Button = styled.div`
   color: #fafafa;
 
   font-family: Spoqa Han Sans Neo;
-  font-size: 16px;
+  font-size: ${(props) => props.fontsize || '16px'};
   font-weight: 500;
   line-height: 20.03px;
   letter-spacing: -0.03em;
