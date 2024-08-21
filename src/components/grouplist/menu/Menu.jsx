@@ -1,5 +1,5 @@
-import Search from '../../search/Search';
-import Tab from '../../tab/Tab';
+import Search from '../../common/search/Search';
+import Tab from '../../common/tab/Tab';
 import * as M from './Menu.style';
 
 export default function Menu() {

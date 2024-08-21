@@ -1,6 +1,6 @@
-import Button from '../components/button/Button';
+import Button from '../components/common/button/Button';
 import Menu from '../components/grouplist/menu/Menu';
-import Tab from '../components/tab/Tab';
+import Tab from '../components/common/tab/Tab';
 
 export default function GroupList() {
   return (

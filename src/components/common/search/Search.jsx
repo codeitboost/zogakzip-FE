@@ -1,5 +1,5 @@
 import * as S from './Search.style';
-import icon from '../../assets/img/search.svg';
+import icon from '../../../assets/img/search.svg';
 
 export default function Search({ placeholder }) {
   return (
