@@ -4,7 +4,7 @@ import GroupCreate from './pages/GroupCreate';
 import GroupDetail from './pages/GroupDetail';
 import MemoryUpload from './pages/MemoryUpload';
 import MemoryDetail from './pages/MemoryDetail';
-import Header from './components/header/Header';
+import Header from './components/common/header/Header';
 
 function App() {
   return (
