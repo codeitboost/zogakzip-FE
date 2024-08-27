@@ -6,5 +6,3 @@ export const Container = styled.div`
   align-items: center;
   height: 100px;
 `;
-
-export const Header = styled.div``;

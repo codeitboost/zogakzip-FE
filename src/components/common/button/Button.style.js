@@ -18,4 +18,6 @@ export const Button = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  user-select: none;
 `;
