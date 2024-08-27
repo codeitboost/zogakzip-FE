@@ -6,6 +6,7 @@ import Tab from '../components/common/tab/Tab';
 import GroupCard from '../components/grouplist/groupcard/GroupCard';
 
 import card5 from '../assets/img/card/card5.png';
+import More from '../components/common/more/More';
 
 const data = [
   {
@@ -157,6 +158,7 @@ export default function GroupList() {
           />
         ))}
       </G.Container>
+      <More />
     </>
   );
 }
