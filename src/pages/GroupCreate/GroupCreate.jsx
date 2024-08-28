@@ -1,4 +1,5 @@
 import Button from '../../components/common/button/Button';
+import Toggle from '../../components/common/toggle/Toggle';
 import * as G from './GroupCreate.style';
 
 export default function GroupCreate() {
