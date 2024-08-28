@@ -1,4 +1,5 @@
 import Button from '../../components/common/button/Button';
+import Toggle from '../../components/common/toggle/Toggle';
 import * as G from './GroupCreate.style';
 
 export default function GroupCreate() {
@@ -24,6 +25,7 @@ export default function GroupCreate() {
         <G.PublicTitle>그룹 공개 선택</G.PublicTitle>
         <G.PublicSelect>
           <G.PublicSelectState>공개</G.PublicSelectState>
+          <Toggle />
         </G.PublicSelect>
       </G.Public>
       <G.Password>

@@ -148,10 +148,18 @@ export const PublicTitle = styled.div`
   line-height: normal;
   letter-spacing: -0.48px;
 
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 `;
 
-export const PublicSelect = styled.div``;
+export const PublicSelect = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  div {
+    margin: 0;
+  }
+`;
 
 export const PublicSelectState = styled.div`
   color: #282828;
