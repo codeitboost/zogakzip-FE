@@ -16,4 +16,6 @@ export const Tab = styled.div`
 
   text-align: center;
   padding: 13px 20px;
+
+  user-select: none;
 `;

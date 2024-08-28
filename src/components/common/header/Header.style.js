@@ -5,6 +5,9 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 100px;
-`;
 
-export const Header = styled.div``;
+  img {
+    position: relative;
+    left: 20px;
+  }
+`;
