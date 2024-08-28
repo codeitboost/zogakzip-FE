@@ -1,12 +1,12 @@
 import * as G from './GroupList.style';
 
-import Button from '../components/common/button/Button';
-import Menu from '../components/grouplist/menu/Menu';
-import Tab from '../components/common/tab/Tab';
-import GroupCard from '../components/grouplist/groupcard/GroupCard';
+import Button from '../../components/common/button/Button';
+import Menu from '../../components/grouplist/menu/Menu';
+import Tab from '../../components/common/tab/Tab';
+import GroupCard from '../../components/grouplist/groupcard/GroupCard';
 
-import card5 from '../assets/img/card/card5.png';
-import More from '../components/common/more/More';
+import card5 from '../../assets/img/card/card5.png';
+import More from '../../components/common/more/More';
 
 const data = [
   {

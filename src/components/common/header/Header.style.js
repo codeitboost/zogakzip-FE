@@ -5,4 +5,9 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 100px;
+
+  img {
+    position: relative;
+    left: 20px;
+  }
 `;
