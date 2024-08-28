@@ -24,6 +24,8 @@ export const Text = styled.div`
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.42px;
+
+  user-select: none;
 `;
 
 export const Img = styled.img`
@@ -33,4 +35,6 @@ export const Img = styled.img`
 
   position: relative;
   left: 5px;
+
+  user-select: none;
 `;

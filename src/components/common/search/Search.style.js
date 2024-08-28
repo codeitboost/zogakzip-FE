@@ -10,6 +10,8 @@ export const Container = styled.div`
 
   border-radius: 6px;
   background-color: #f4f4f4;
+
+  user-select: none;
 `;
 
 export const TextField = styled.input`
