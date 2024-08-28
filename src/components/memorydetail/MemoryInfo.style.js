@@ -55,7 +55,7 @@ export const Middle = styled.div`
   flex-direction: column;
   gap: 20px;
 
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 
   div {
     margin: 0;
@@ -77,6 +77,7 @@ export const Tag = styled.div`
 
 export const Bottom = styled.div`
   display: flex;
+  justify-content: space-between;
 
   margin-bottom: 60px;
 
@@ -87,12 +88,12 @@ export const Bottom = styled.div`
 
 export const BottomLeft = styled.div`
   display: flex;
+  align-items: flex-end;
   gap: 35px;
 `;
 
 export const WriteInfo = styled.div`
   display: flex;
-  align-items: center;
   gap: 10px;
 
   font-size: 16px;
@@ -125,6 +126,8 @@ export const Comment = styled.div`
   align-items: center;
   gap: 5px;
 `;
+
+export const BottomRight = styled.div``;
 
 export const Line = styled.div`
   height: 1px;

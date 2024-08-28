@@ -1,4 +1,5 @@
 import * as M from './MemoryInfo.style';
+import Like from '../common/like/Like';
 
 import heart from '../../assets/img/heart.svg';
 import comment from '../../assets/img/comment.svg';
@@ -39,6 +40,9 @@ export default function MemoryInfo() {
             </M.Comment>
           </M.Count>
         </M.BottomLeft>
+        <M.BottomRight>
+          <Like />
+        </M.BottomRight>
       </M.Bottom>
       <M.Line />
     </M.Container>
