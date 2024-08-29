@@ -36,6 +36,10 @@ export const Input = styled.input`
   &::placeholder {
     color: #b8b8b8;
   }
+
+  &:focus {
+    outline: none;
+  }
 `;
 
 export const Button = styled.div`
@@ -54,4 +58,7 @@ export const Button = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  user-select: none;
+  cursor: pointer;
 `;
