@@ -15,8 +15,6 @@ export const Background = styled.div`
 
 export const Container = styled.div`
   position: relative;
-  width: 1120px;
-  height: 794px;
 
   padding: 40px;
 
@@ -39,4 +37,9 @@ export const Cancel = styled.button`
   top: 20px;
 
   border: none;
+  background-color: transparent;
+
+  img {
+    background-color: transparent;
+  }
 `;
