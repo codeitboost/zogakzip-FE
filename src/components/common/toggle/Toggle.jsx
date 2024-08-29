@@ -1,15 +1,8 @@
-import { useState } from 'react';
 import * as T from './Toggle.style';
 
-export default function Toggle() {
-  const [state, setState] = useState(false);
-
-  const handleToggle = () => {
-    setState(!state);
-  };
-
+export default function Toggle({ state, onClick }) {
   return (
-    <T.Container state={state} onClick={handleToggle}>
+    <T.Container state={state} onClick={onClick}>
       <T.Circle state={state} />
     </T.Container>
   );

@@ -17,7 +17,7 @@ export const Title = styled.div`
 export const Select = styled.div`
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: ${(props) => (props.state ? '25px' : '13px')};
 
   div {
     margin: 0;
