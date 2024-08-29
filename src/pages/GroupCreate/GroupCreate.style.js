@@ -31,28 +31,6 @@ export const Title = styled.div`
   margin: 60px 0;
 `;
 
-export const Intro = styled.div`
-  margin-bottom: 40px;
-`;
-
-export const IntroTitle = styled.div`
-  color: #282828;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: -0.48px;
-
-  margin-bottom: 10px;
-`;
-
-export const IntroField = styled.textarea`
-  width: 400px;
-  height: 120px;
-
-  padding: 15px 20px;
-
-  resize: none;
-`;
-
 export const Public = styled.div`
   width: 400px;
   margin-bottom: 40px;
