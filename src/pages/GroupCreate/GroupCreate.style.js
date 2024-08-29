@@ -3,22 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-
-  input,
-  textarea {
-    color: #282828;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: -0.42px;
-
-    border-radius: 6px;
-    border: 1px solid #ddd;
-    background-color: #fafafa;
-
-    &::placeholder {
-      color: #b8b8b8;
-    }
-  }
 `;
 
 export const Title = styled.div`

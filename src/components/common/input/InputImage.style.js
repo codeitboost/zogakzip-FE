@@ -23,6 +23,19 @@ export const Input = styled.input`
   height: 45px;
 
   padding: 0 20px;
+
+  color: #282828;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.42px;
+
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+
+  &::placeholder {
+    color: #b8b8b8;
+  }
 `;
 
 export const Button = styled.div`

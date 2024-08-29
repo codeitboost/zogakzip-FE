@@ -20,4 +20,17 @@ export const Input = styled.textarea`
   padding: 15px 20px;
 
   resize: none;
+
+  color: #282828;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.42px;
+
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+
+  &::placeholder {
+    color: #b8b8b8;
+  }
 `;
