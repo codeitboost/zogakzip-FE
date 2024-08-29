@@ -31,26 +31,6 @@ export const Title = styled.div`
   margin: 60px 0;
 `;
 
-export const Name = styled.div`
-  margin-bottom: 40px;
-`;
-
-export const NameTitle = styled.div`
-  color: #282828;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: -0.48px;
-
-  margin-bottom: 10px;
-`;
-
-export const NameField = styled.input`
-  width: 400px;
-  height: 45px;
-
-  padding: 0 20px;
-`;
-
 export const Image = styled.div`
   margin-bottom: 40px;
 `;
@@ -145,23 +125,4 @@ export const PublicSelectState = styled.div`
   font-size: 14px;
   font-weight: 400;
   letter-spacing: -0.42px;
-`;
-
-export const Password = styled.div``;
-
-export const PasswordTitle = styled.div`
-  color: #282828;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: -0.48px;
-
-  margin-bottom: 10px;
-`;
-
-export const PasswordField = styled.input`
-  width: 400px;
-  height: 45px;
-
-  margin-bottom: 75px;
-  padding: 0 20px;
 `;
