@@ -6,6 +6,7 @@ import heart from '../../../assets/img/heart.svg';
 import comment from '../../../assets/img/comment.svg';
 import Modal from '../../common/modal/Modal';
 import MemoryDeleteModal from '../memorydeletemodal/MemoryDeleteModal';
+import MemoryEditModal from '../memoryeditmodal/MemoryEditModal';
 
 export default function MemoryInfo() {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
@@ -57,7 +58,7 @@ export default function MemoryInfo() {
       </M.Bottom>
       <M.Line />
       <Modal isOpen={isEditModalOpen} onClose={closeEditModal} title="추억 수정">
-        <p>Modal Test</p>
+        <MemoryEditModal />
       </Modal>
       <Modal isOpen={isDeleteModalOpen} onClose={closeDeleteModal} title="추억 삭제">
         <MemoryDeleteModal />
