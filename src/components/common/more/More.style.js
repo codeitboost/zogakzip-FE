@@ -16,7 +16,6 @@ export const Container = styled.div`
 export const Text = styled.div`
   color: #282828;
   text-align: center;
-  font-family: 'Spoqa Han Sans Neo';
   font-size: 14px;
   font-style: normal;
   font-weight: 700;

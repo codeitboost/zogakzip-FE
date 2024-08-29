@@ -19,7 +19,6 @@ export const TextField = styled.input`
   height: 25px;
   margin: 0;
 
-  font-family: 'Spoqa Han Sans Neo';
   font-size: 14px;
   font-style: normal;
   font-weight: 400;

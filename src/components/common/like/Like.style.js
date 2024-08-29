@@ -14,7 +14,6 @@ export const Container = styled.div`
   background: #fafafa;
 
   color: #282828;
-  font-family: 'Spoqa Han Sans Neo';
   font-size: 16px;
   font-weight: 500;
   letter-spacing: -0.48px;

@@ -18,7 +18,6 @@ export const Text = styled.div`
   margin: 0;
 
   color: #282828;
-  font-family: 'Spoqa Han Sans Neo';
   font-size: 14px;
   font-style: normal;
   font-weight: 400;

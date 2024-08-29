@@ -25,7 +25,6 @@ export const Container = styled.div`
 export const Title = styled.div`
   color: #282828;
   text-align: center;
-  font-family: 'Spoqa Han Sans Neo';
   font-size: 24px;
   font-weight: 700;
   letter-spacing: -0.72px;

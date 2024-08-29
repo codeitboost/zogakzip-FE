@@ -5,7 +5,6 @@ export const Container = styled.div`
   padding: 20px;
 
   color: var(--black-black_282828, #282828);
-  font-family: 'Spoqa Han Sans Neo';
 
   border-radius: 12px;
   border: 1px solid #ddd;

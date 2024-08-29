@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   color: #282828;
-  font-family: 'Spoqa Han Sans Neo';
   font-size: 18px;
   font-weight: 500;
   letter-spacing: -0.54px;

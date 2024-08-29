@@ -11,7 +11,6 @@ export const Top = styled.div`
   margin-bottom: 20px;
 
   color: #282828;
-  font-family: 'Spoqa Han Sans Neo';
 
   div {
     margin: 0;

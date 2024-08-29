@@ -8,7 +8,6 @@ export const Button = styled.div`
   background-color: #282828;
   color: #fafafa;
 
-  font-family: Spoqa Han Sans Neo;
   font-size: ${(props) => props.fontsize || '16px'};
   font-weight: 500;
   line-height: 20.03px;
