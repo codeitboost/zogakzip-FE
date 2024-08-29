@@ -1,10 +1,17 @@
+import { useState } from 'react';
 import * as M from './MemoryInfo.style';
 import Like from '../common/like/Like';
 
 import heart from '../../assets/img/heart.svg';
 import comment from '../../assets/img/comment.svg';
+import Modal from '../common/Modal/Modal';
 
 export default function MemoryInfo() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <M.Container>
       <M.Top>
@@ -14,7 +21,7 @@ export default function MemoryInfo() {
           <M.Public>공개</M.Public>
         </M.Info>
         <M.Menu>
-          <M.Edit>추억 수정하기</M.Edit>
+          <M.Edit onClick={openModal}>추억 수정하기</M.Edit>
           <M.Delete>추억 삭제하기</M.Delete>
         </M.Menu>
       </M.Top>
@@ -45,6 +52,9 @@ export default function MemoryInfo() {
         </M.BottomRight>
       </M.Bottom>
       <M.Line />
+      <Modal isOpen={isModalOpen} onClose={closeModal} title="추억 수정">
+        <p>Modal Test</p>
+      </Modal>
     </M.Container>
   );
 }

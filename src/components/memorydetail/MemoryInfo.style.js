@@ -45,10 +45,16 @@ export const Menu = styled.div`
   letter-spacing: -0.42px;
 `;
 
-export const Edit = styled.div``;
+export const Edit = styled.div`
+  user-select: none;
+  cursor: pointer;
+`;
 
 export const Delete = styled.div`
   color: #8d8d8d;
+
+  user-select: none;
+  cursor: pointer;
 `;
 
 export const Middle = styled.div`
