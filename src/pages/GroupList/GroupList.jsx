@@ -147,6 +147,7 @@ export default function GroupList() {
         {data.map((item) => (
           <GroupCard
             key={item.id}
+            id={item.id}
             img={item.img}
             day={item.day}
             isPublic={item.isPublic}

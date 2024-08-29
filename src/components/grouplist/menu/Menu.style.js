@@ -8,6 +8,8 @@ export const Button = styled.div`
   position: absolute;
   right: 0;
   bottom: 105px;
+
+  cursor: pointer;
 `;
 
 export const Menu = styled.div`

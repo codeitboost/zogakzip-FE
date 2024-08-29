@@ -5,12 +5,17 @@ import Like from '../../common/like/Like';
 import heart from '../../../assets/img/heart.svg';
 import comment from '../../../assets/img/comment.svg';
 import Modal from '../../common/modal/Modal';
+import MemoryDeleteModal from '../memorydeletemodal/MemoryDeleteModal';
+import MemoryEditModal from '../memoryeditmodal/MemoryEditModal';
 
 export default function MemoryInfo() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const openEditModal = () => setIsEditModalOpen(true);
+  const openDeleteModal = () => setIsDeleteModalOpen(true);
+  const closeEditModal = () => setIsEditModalOpen(false);
+  const closeDeleteModal = () => setIsDeleteModalOpen(false);
 
   return (
     <M.Container>
@@ -21,8 +26,8 @@ export default function MemoryInfo() {
           <M.Public>공개</M.Public>
         </M.Info>
         <M.Menu>
-          <M.Edit onClick={openModal}>추억 수정하기</M.Edit>
-          <M.Delete>추억 삭제하기</M.Delete>
+          <M.Edit onClick={openEditModal}>추억 수정하기</M.Edit>
+          <M.Delete onClick={openDeleteModal}>추억 삭제하기</M.Delete>
         </M.Menu>
       </M.Top>
       <M.Middle>
@@ -52,8 +57,11 @@ export default function MemoryInfo() {
         </M.BottomRight>
       </M.Bottom>
       <M.Line />
-      <Modal isOpen={isModalOpen} onClose={closeModal} title="추억 수정">
-        <p>Modal Test</p>
+      <Modal isOpen={isEditModalOpen} onClose={closeEditModal} title="추억 수정">
+        <MemoryEditModal />
+      </Modal>
+      <Modal isOpen={isDeleteModalOpen} onClose={closeDeleteModal} title="추억 삭제">
+        <MemoryDeleteModal />
       </Modal>
     </M.Container>
   );

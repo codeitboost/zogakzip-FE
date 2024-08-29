@@ -19,9 +19,7 @@ export const Text = styled.div`
 
   color: #282828;
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   letter-spacing: -0.42px;
 
   user-select: none;

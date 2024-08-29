@@ -1,10 +1,16 @@
+import { useNavigate } from 'react-router-dom';
 import * as G from './GroupCard.style';
 import card1 from '../../../assets/img/card/card1.png';
 import logo from '../../../assets/img/logo/logo16.svg';
 
-export default function GroupCard({ img, day, isPublic, title, content, badge, memory, like }) {
+export default function GroupCard({ id, img, day, isPublic, title, content, badge, memory, like }) {
+  const navigate = useNavigate();
+  const handleGroupDetail = () => {
+    navigate(`/group-detail/${id}`);
+  };
+
   return (
-    <G.Container>
+    <G.Container onClick={handleGroupDetail}>
       {img && <G.Img src={img} alt="card1" />}
       <G.Info>
         <G.Day>D+{day}</G.Day>
