@@ -7,6 +7,7 @@ export const Top = styled.div`
   justify-content: space-between;
   align-items: center;
 
+  margin-top: 60px;
   margin-bottom: 20px;
 
   color: #282828;
