@@ -10,7 +10,6 @@ export const Tab = styled.div`
 
   font-size: 14px;
   font-weight: 700;
-  line-height: normal;
   letter-spacing: -0.42px;
 
   text-align: center;

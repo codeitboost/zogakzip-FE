@@ -29,9 +29,7 @@ export const Info = styled.div`
 
   color: #b8b8b8;
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   letter-spacing: -0.42px;
 `;
 
@@ -47,9 +45,7 @@ export const Title = styled.div`
   margin: 20px 0;
 
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   letter-spacing: -0.48px;
 `;
 
@@ -71,9 +67,7 @@ export const Count = styled.div`
   gap: 40px;
 
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   letter-spacing: -0.42px;
 `;
 
