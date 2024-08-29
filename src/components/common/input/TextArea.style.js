@@ -33,4 +33,9 @@ export const Input = styled.textarea`
   &::placeholder {
     color: #b8b8b8;
   }
+
+  &:focus {
+    border-color: #282828;
+    outline: none;
+  }
 `;
