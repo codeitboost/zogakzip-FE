@@ -1,4 +1,5 @@
 import Button from '../../components/common/button/Button';
+import InputImage from '../../components/common/input/InputImage';
 import InputText from '../../components/common/input/InputText';
 import Toggle from '../../components/common/toggle/Toggle';
 import * as G from './GroupCreate.style';
@@ -8,13 +9,7 @@ export default function GroupCreate() {
     <G.Container>
       <G.Title>그룹 만들기</G.Title>
       <InputText title="그룹명">그룹 이름을 입력해 주세요</InputText>
-      <G.Image>
-        <G.ImageTitle>대표 이미지</G.ImageTitle>
-        <G.ImageSelect>
-          <G.ImageField placeholder="파일을 선택해 주세요" />
-          <G.ImageButton>파일 선택</G.ImageButton>
-        </G.ImageSelect>
-      </G.Image>
+      <InputImage />
       <G.Intro>
         <G.IntroTitle>그룹 소개</G.IntroTitle>
         <G.IntroField placeholder="그룹을 소개해 주세요" />
