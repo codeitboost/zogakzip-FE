@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<GroupList />} />
         <Route path="/group-create" element={<GroupCreate />} />
-        <Route path="/group-detail" element={<GroupDetail />} />
+        <Route path="/group-detail/:id" element={<GroupDetail />} />
         <Route path="/memory-upload" element={<MemoryUpload />} />
         <Route path="/memory-detail" element={<MemoryDetail />} />
       </Routes>
