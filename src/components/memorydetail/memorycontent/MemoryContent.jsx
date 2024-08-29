@@ -1,7 +1,7 @@
 import * as M from './MemoryContent.style';
-import Button from '../common/button/Button';
+import Button from '../../common/button/Button';
 
-import image from '../../assets/img/card/card3.png';
+import image from '../../../assets/img/card/card3.png';
 
 export default function MemoryContent() {
   return (

@@ -1,6 +1,6 @@
-import MemoryComment from '../components/memorydetail/MemoryComment';
-import MemoryContent from '../components/memorydetail/MemoryContent';
-import MemoryInfo from '../components/memorydetail/MemoryInfo';
+import MemoryComment from '../components/memorydetail/memorycomment/MemoryComment';
+import MemoryContent from '../components/memorydetail/memorycontent/MemoryContent';
+import MemoryInfo from '../components/memorydetail/memoryinfo/MemoryInfo';
 
 export default function MemoryDetail() {
   return (

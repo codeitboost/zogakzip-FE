@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import * as M from './MemoryInfo.style';
-import Like from '../common/like/Like';
+import Like from '../../common/like/Like';
 
-import heart from '../../assets/img/heart.svg';
-import comment from '../../assets/img/comment.svg';
-import Modal from '../common/Modal/Modal';
+import heart from '../../../assets/img/heart.svg';
+import comment from '../../../assets/img/comment.svg';
+import Modal from '../../common/modal/Modal';
 
 export default function MemoryInfo() {
   const [isModalOpen, setIsModalOpen] = useState(false);

@@ -1,5 +1,5 @@
 import * as M from './MemoryComment.style';
-import MemoryCommentItem from './MemoryCommentItem';
+import MemoryCommentItem from '../momorycommentitem/MemoryCommentItem';
 
 export default function MemoryComment() {
   return (

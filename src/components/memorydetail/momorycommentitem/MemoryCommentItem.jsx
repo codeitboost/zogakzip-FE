@@ -1,7 +1,7 @@
 import * as M from './MemoryCommentItem.style';
 
-import editIcon from '../../assets/img/edit.svg';
-import deleteIcon from '../../assets/img/delete.svg';
+import editIcon from '../../../assets/img/edit.svg';
+import deleteIcon from '../../../assets/img/delete.svg';
 
 export default function MemoryCommentItem() {
   return (
