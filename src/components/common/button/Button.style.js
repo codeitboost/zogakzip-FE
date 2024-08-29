@@ -19,4 +19,5 @@ export const Button = styled.div`
   align-items: center;
 
   user-select: none;
+  cursor: pointer;
 `;

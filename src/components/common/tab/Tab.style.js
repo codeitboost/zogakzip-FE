@@ -16,4 +16,5 @@ export const Tab = styled.div`
   padding: 13px 20px;
 
   user-select: none;
+  cursor: pointer;
 `;
