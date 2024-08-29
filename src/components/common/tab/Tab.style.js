@@ -8,7 +8,6 @@ export const Tab = styled.div`
   background-color: ${(props) => (props.state ? '#282828' : 'none')};
   color: ${(props) => (props.state ? '#fafafa' : '#282828')};
 
-  font-family: Spoqa Han Sans Neo;
   font-size: 14px;
   font-weight: 700;
   line-height: normal;

@@ -7,11 +7,8 @@ export const Container = styled.div`
   input,
   textarea {
     color: #282828;
-    font-family: 'Spoqa Han Sans Neo';
     font-size: 14px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
     letter-spacing: -0.42px;
 
     border-radius: 6px;
@@ -27,11 +24,8 @@ export const Container = styled.div`
 export const Title = styled.div`
   color: #282828;
   text-align: center;
-  font-family: 'Spoqa Han Sans Neo';
   font-size: 24px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   letter-spacing: -0.72px;
 
   margin: 60px 0;
@@ -43,11 +37,8 @@ export const Name = styled.div`
 
 export const NameTitle = styled.div`
   color: #282828;
-  font-family: 'Spoqa Han Sans Neo';
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: -0.48px;
 
   margin-bottom: 10px;
@@ -66,11 +57,8 @@ export const Image = styled.div`
 
 export const ImageTitle = styled.div`
   color: #282828;
-  font-family: 'Spoqa Han Sans Neo';
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: -0.48px;
 
   margin-bottom: 10px;
@@ -97,11 +85,8 @@ export const ImageButton = styled.div`
   background-color: #fafafa;
 
   color: #282828;
-  font-family: 'Spoqa Han Sans Neo';
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   letter-spacing: -0.42px;
 
   display: flex;
@@ -115,11 +100,8 @@ export const Intro = styled.div`
 
 export const IntroTitle = styled.div`
   color: #282828;
-  font-family: 'Spoqa Han Sans Neo';
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: -0.48px;
 
   margin-bottom: 10px;
@@ -141,11 +123,8 @@ export const Public = styled.div`
 
 export const PublicTitle = styled.div`
   color: #282828;
-  font-family: 'Spoqa Han Sans Neo';
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: -0.48px;
 
   margin-bottom: 20px;
@@ -163,11 +142,8 @@ export const PublicSelect = styled.div`
 
 export const PublicSelectState = styled.div`
   color: #282828;
-  font-family: 'Spoqa Han Sans Neo';
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   letter-spacing: -0.42px;
 `;
 
@@ -175,11 +151,8 @@ export const Password = styled.div``;
 
 export const PasswordTitle = styled.div`
   color: #282828;
-  font-family: 'Spoqa Han Sans Neo';
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: -0.48px;
 
   margin-bottom: 10px;
