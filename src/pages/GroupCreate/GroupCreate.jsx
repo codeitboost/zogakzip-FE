@@ -13,7 +13,7 @@ export default function GroupCreate() {
       <InputText title="그룹명">그룹 이름을 입력해 주세요</InputText>
       <InputImage />
       <TextArea />
-      <ToggleMenu />
+      <ToggleMenu title="그룹 공개 선택" />
       <InputText title="비밀번호">비밀번호를 입력해 주세요</InputText>
       <Button text="만들기" width="400px" height="50px" fontsize="16px" />
     </G.Container>
