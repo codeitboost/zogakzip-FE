@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import GroupList from './pages/GroupList/GroupList';
-import GroupCreate from './pages/GroupCreate/GroupCreate';
+import GroupList from './pages/grouplist/GroupList';
+import GroupCreate from './pages/groupcreate/GroupCreate';
 import GroupDetail from './pages/GroupDetail';
-import MemoryUpload from './pages/MemoryUpload';
+import MemoryUpload from './pages/memoryupload/MemoryUpload';
 import MemoryDetail from './pages/MemoryDetail';
 import Header from './components/common/header/Header';
 
