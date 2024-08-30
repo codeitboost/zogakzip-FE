@@ -4,13 +4,13 @@ export const Container = styled.div`
   width: 780px;
 
   margin-bottom: 80px;
+`;
 
-  img {
-    width: 780px;
-    height: 780px;
+export const Image = styled.img`
+  width: 780px;
+  height: 780px;
 
-    margin-bottom: 60px;
-  }
+  margin-bottom: 60px;
 `;
 
 export const Content = styled.div`
