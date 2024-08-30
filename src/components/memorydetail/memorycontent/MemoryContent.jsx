@@ -5,7 +5,7 @@ import CommentUploadModal from '../commentuploadmodal/CommentUploadModal';
 import Modal from '../../common/modal/Modal';
 import * as M from './MemoryContent.style';
 
-export default function MemoryContent() {
+export default function MemoryContent({ addComment }) {
   const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
 
   const openUploadModal = () => setIsUploadModalOpen(true);
@@ -25,7 +25,7 @@ export default function MemoryContent() {
       </M.Content>
       <Button text="댓글 등록하기" onClick={openUploadModal} />
       <Modal isOpen={isUploadModalOpen} onClose={closeUploadModal} title="댓글 등록">
-        <CommentUploadModal />
+        <CommentUploadModal addComment={addComment} closeModal={closeUploadModal} />
       </Modal>
     </M.Container>
   );
