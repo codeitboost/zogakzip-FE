@@ -20,12 +20,12 @@ export default function MemoryEditModal() {
         <InputText title="장소">장소를 입력해 주세요</InputText>
       </M.Row>
       <M.Row>
-        <InputImage />
+        <InputImage title="이미지" />
         <M.Line />
         <InputText title="추억의 순간">추억의 순간을 입력해 주세요</InputText>
       </M.Row>
       <M.Row>
-        <TextArea />
+        <TextArea title="본문">본문 내용을 입력해 주세요</TextArea>
         <M.LastLine />
         <div>
           <ToggleMenu title="추억 공개 선택" />
