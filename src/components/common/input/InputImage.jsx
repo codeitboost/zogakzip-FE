@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import * as I from './InputImage.style';
 
-export default function InputImage() {
+export default function InputImage({ title }) {
   const [fileName, setFileName] = useState('');
   const fileInputRef = useRef(null);
 
@@ -18,7 +18,7 @@ export default function InputImage() {
 
   return (
     <I.Container>
-      <I.Title>대표 이미지</I.Title>
+      <I.Title>{title}</I.Title>
       <I.Select>
         <I.Input value={fileName} placeholder="파일을 선택해 주세요" readOnly />
         <I.Button onClick={handleButtonClick}>파일 선택</I.Button>
