@@ -52,3 +52,8 @@ export const Line = styled.div`
 
   margin-bottom: 20px;
 `;
+
+export const Button = styled.button`
+  border: none;
+  cursor: pointer;
+`;
