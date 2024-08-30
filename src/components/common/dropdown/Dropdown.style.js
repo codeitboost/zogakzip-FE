@@ -12,6 +12,10 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  position: relative;
+
+  cursor: pointer;
 `;
 
 export const Text = styled.div`
@@ -34,4 +38,35 @@ export const Img = styled.img`
   left: 5px;
 
   user-select: none;
+`;
+
+export const Options = styled.ul`
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 100%;
+
+  border-radius: 6px;
+  box-shadow: 0 0 5px #b8b8b8;
+
+  padding: 3px;
+  margin: 0;
+
+  list-style: none;
+  z-index: 10;
+`;
+
+export const Option = styled.li`
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #282828;
+
+  border-radius: 6px;
+
+  &:hover {
+    background-color: #eaeaea;
+  }
+
+  user-select: none;
+  cursor: pointer;
 `;
