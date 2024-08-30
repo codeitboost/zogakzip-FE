@@ -1,6 +1,7 @@
 import InputText from '../../common/input/InputText';
 import InputImage from '../../common/input/InputImage';
 import TextArea from '../../common/input/TextArea';
+import InputTag from '../../common/input/tag/InputTag';
 import ToggleMenu from '../../common/toggle/ToggleMenu';
 import * as M from './MemoryEditModal.style';
 import Button from '../../common/button/Button';
@@ -11,8 +12,7 @@ export default function MemoryEditModal() {
       <M.Row>
         <InputText title="닉네임">닉네임을 입력해 주세요</InputText>
         <M.Line />
-        {/* 태그 컴포넌트 만들기 전 임시 */}
-        <InputText title="태그">태그 입력 후 Enter</InputText>
+        <InputTag />
       </M.Row>
       <M.Row>
         <InputText title="제목">제목을 입력해 주세요</InputText>
