@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  width: 961px;
+
   margin-top: 60px;
-  padding: 0 40px;
 `;
 
 export const Title = styled.div`
