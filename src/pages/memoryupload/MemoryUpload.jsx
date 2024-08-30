@@ -34,7 +34,7 @@ export default function MemoryUpload() {
         </div>
       </M.Row>
       <M.Button>
-        <Button text="수정하기" />
+        <Button text="올리기" />
       </M.Button>
     </M.Container>
   );
