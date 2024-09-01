@@ -4,9 +4,9 @@ import InputText from '../../common/input/InputText';
 import TextArea from '../../common/input/TextArea';
 import * as C from './CommentEditModal.style';
 
-export default function CommentEditModal({ commentName, commentText, commentPassword, onEdit, closeModal }) {
-  const [name, setName] = useState('');
-  const [comment, setComment] = useState('');
+export default function CommentEditModal({ id, commentName, commentText, commentPassword, onEdit, closeModal }) {
+  const [name, setName] = useState(commentName);
+  const [comment, setComment] = useState(commentText);
   const [password, setPassword] = useState('');
   const [isPasswordValid, setIsPasswordValid] = useState(true);
 
@@ -15,8 +15,10 @@ export default function CommentEditModal({ commentName, commentText, commentPass
   const handlePasswordChange = (e) => setPassword(e.target.value);
 
   const handleSubmit = () => {
+    console.log(password, commentPassword);
     if (password === commentPassword) {
-      onEdit(name, comment); // 수정 기능을 부모 컴포넌트에 전달
+      console.log('Submitting Edit:', id, name, comment);
+      onEdit(name, comment);
       closeModal();
     } else {
       setIsPasswordValid(false);
@@ -37,7 +39,7 @@ export default function CommentEditModal({ commentName, commentText, commentPass
         </InputText>
         {!isPasswordValid && <C.Error>비밀번호가 일치하지 않습니다.</C.Error>}
       </div>
-      <Button text="등록하기" />
+      <Button text="등록하기" onClick={handleSubmit} />
     </C.Container>
   );
 }
