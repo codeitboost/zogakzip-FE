@@ -5,8 +5,9 @@ import deleteIcon from '../../../assets/img/delete.svg';
 import Modal from '../../common/modal/Modal';
 import CommentUploadModal from '../commentuploadmodal/CommentUploadModal';
 import MemoryDeleteModal from '../memorydeletemodal/MemoryDeleteModal';
+import CommentEditModal from '../commenteditmodal/CommentEditModal';
 
-export default function MemoryCommentItem({ name, date, children }) {
+export default function MemoryCommentItem({ id, name, date, children, password, onEdit }) {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
@@ -34,7 +35,13 @@ export default function MemoryCommentItem({ name, date, children }) {
       </M.Content>
       <M.Line />
       <Modal isOpen={isEditModalOpen} onClose={closeEditModal} title="댓글 수정">
-        <CommentUploadModal />
+        <CommentEditModal
+          commentName={name}
+          commentText={children}
+          commentPassword={password}
+          onEdit={onEdit}
+          closeModal={closeEditModal}
+        />
       </Modal>
       <Modal isOpen={isDeleteModalOpen} onClose={closeDeleteModal} title="댓글 삭제">
         <MemoryDeleteModal />
