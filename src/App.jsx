@@ -5,6 +5,7 @@ import GroupDetail from './pages/GroupDetail';
 import MemoryUpload from './pages/memoryupload/MemoryUpload';
 import MemoryDetail from './pages/MemoryDetail';
 import Header from './components/common/header/Header';
+import GroupAccess from './pages/groupacess/GroupAccess';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/group-detail/:id" element={<GroupDetail />} />
         <Route path="/memory-upload" element={<MemoryUpload />} />
         <Route path="/memory-detail" element={<MemoryDetail />} />
+        <Route path="/group-access" element={<GroupAccess />} />
       </Routes>
     </BrowserRouter>
   );
