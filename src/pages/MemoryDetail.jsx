@@ -8,10 +8,10 @@ const generateId = () => `${Date.now()}-${Math.random().toString(36).substr(2, 9
 export default function MemoryDetail() {
   const [comments, setComments] = useState([]);
 
-  const addComment = (name, comment) => {
+  const addComment = (name, comment, password) => {
     setComments((prevComments) => [
       ...prevComments,
-      { id: generateId(), name, comment, date: new Date().toLocaleString() },
+      { id: generateId(), name, comment, password, date: new Date().toLocaleString() },
     ]);
   };
 

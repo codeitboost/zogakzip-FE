@@ -15,7 +15,7 @@ export default function CommentUploadModal({ addComment, closeModal }) {
 
   const handleSubmit = () => {
     if (name.trim() && comment.trim()) {
-      addComment(name, comment);
+      addComment(name, comment, password);
       closeModal();
     }
   };
