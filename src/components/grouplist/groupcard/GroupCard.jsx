@@ -11,7 +11,7 @@ export default function GroupCard({ id, img, day, isPublic, title, content, badg
 
   return (
     <G.Container onClick={handleGroupDetail}>
-      ㄱ{img && <G.Img src={img} alt="card1" />}
+      {img && <G.Img src={img} alt="card1" />}
       <G.Info>
         <G.Day>D+{day}</G.Day>
         <div>|</div>
