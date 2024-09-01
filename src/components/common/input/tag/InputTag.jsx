@@ -2,7 +2,7 @@ import { useState } from 'react';
 import * as I from './InputTag.style';
 import InputTagItem from './InputTagItem';
 
-export default function InputText() {
+export default function InputTag() {
   const [tags, setTags] = useState([]);
   const [inputValue, setInputValue] = useState('');
 

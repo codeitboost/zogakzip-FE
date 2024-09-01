@@ -1,17 +1,20 @@
 import { useState } from 'react';
 import * as I from './InputText.style';
 
-export default function InputText({ title, children }) {
-  const [value, setValue] = useState('');
+export default function InputText({ title, children, value, onChange }) {
   const [isValid, setIsValid] = useState(true);
 
   const handleChange = (event) => {
     const newValue = event.target.value;
-    setValue(newValue);
+    onChange(event); // 부모 컴포넌트의 상태 업데이트를 호출합니다.
 
     // 유효성 검사
     const regex = /^[a-zA-Z0-9ㄱ-힣ㄱ-ㅎㅏ-ㅣ!@#$%^_]*$/;
-    setIsValid(regex.test(newValue));
+    if (regex.test(newValue)) {
+      setIsValid(true);
+    } else {
+      setIsValid(false);
+    }
   };
 
   return (
