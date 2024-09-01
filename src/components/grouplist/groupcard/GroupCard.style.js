@@ -5,7 +5,6 @@ export const Container = styled.div`
   padding: 20px;
 
   color: var(--black-black_282828, #282828);
-  font-family: 'Spoqa Han Sans Neo';
 
   border-radius: 12px;
   border: 1px solid #ddd;
@@ -13,9 +12,13 @@ export const Container = styled.div`
 
   display: flex;
   flex-direction: column;
+
+  cursor: pointer;
 `;
 
 export const Img = styled.img`
+  width: 335px;
+  height: auto;
   margin-bottom: 20px;
 `;
 
@@ -30,9 +33,7 @@ export const Info = styled.div`
 
   color: #b8b8b8;
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   letter-spacing: -0.42px;
 `;
 
@@ -48,9 +49,7 @@ export const Title = styled.div`
   margin: 20px 0;
 
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   letter-spacing: -0.48px;
 `;
 
@@ -72,9 +71,7 @@ export const Count = styled.div`
   gap: 40px;
 
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   letter-spacing: -0.42px;
 `;
 

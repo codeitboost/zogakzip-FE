@@ -5,17 +5,16 @@ export const Tab = styled.div`
   height: 45px;
   border-radius: 22.5px;
 
-  background-color: ${(props) => (props.state ? '#282828' : 'none')};
-  color: ${(props) => (props.state ? '#fafafa' : '#282828')};
+  background-color: ${({ isActive }) => (isActive ? '#282828' : 'none')};
+  color: ${({ isActive }) => (isActive ? '#fafafa' : '#282828')};
 
-  font-family: Spoqa Han Sans Neo;
   font-size: 14px;
   font-weight: 700;
-  line-height: normal;
   letter-spacing: -0.42px;
 
   text-align: center;
   padding: 13px 20px;
 
   user-select: none;
+  cursor: pointer;
 `;

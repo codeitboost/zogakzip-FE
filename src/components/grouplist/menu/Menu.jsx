@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../common/button/Button';
 import Dropdown from '../../common/dropdown/Dropdown';
@@ -6,9 +7,15 @@ import Tab from '../../common/tab/Tab';
 import * as M from './Menu.style';
 
 export default function Menu() {
+  const [activeTab, setActiveTab] = useState('public'); // 'public' 또는 'private'
+
   const navigate = useNavigate();
   const handleGroupCreate = () => {
     navigate('/group-create');
+  };
+
+  const handleTabClick = (tabType) => {
+    setActiveTab(tabType);
   };
 
   return (
@@ -18,8 +25,8 @@ export default function Menu() {
       </M.Button>
       <M.Menu>
         <M.Tab>
-          <Tab text="공개" />
-          <Tab text="비공개" />
+          <Tab text="공개" isActive={activeTab === 'public'} onClick={() => handleTabClick('public')} />
+          <Tab text="비공개" isActive={activeTab === 'private'} onClick={() => handleTabClick('private')} />
         </M.Tab>
         <Search placeholder="그룹명을 검색해 주세요" />
         <Dropdown />
