@@ -1,12 +1,13 @@
+import { useContext } from 'react';
 import * as G from './GroupList.style';
-
 import Button from '../../components/common/button/Button';
 import Menu from '../../components/grouplist/menu/Menu';
 import Tab from '../../components/common/tab/Tab';
 import GroupCard from '../../components/grouplist/groupcard/GroupCard';
-
 import card5 from '../../assets/img/card/card5.png';
 import More from '../../components/common/more/More';
+import { GroupContext } from '../../components/groupcreate/GroupContext';
+import NoGroupList from './NoGroupList';
 
 const data = [
   {
@@ -139,27 +140,34 @@ const data = [
 ];
 
 export default function GroupList() {
+  const { groups } = useContext(GroupContext);
+
   return (
     <>
-      {/* <Button text="그룹 만들기" width="200px" height="45px" fontsize="14px" /> */}
       <Menu />
-      <G.Container>
-        {data.map((item) => (
-          <GroupCard
-            key={item.id}
-            id={item.id}
-            img={item.img}
-            day={item.day}
-            isPublic={item.isPublic}
-            title={item.title}
-            content={item.content}
-            badge={item.badge}
-            memory={item.memory}
-            like={item.like}
-          />
-        ))}
-      </G.Container>
-      <More />
+      {groups.length === 0 ? (
+        <NoGroupList />
+      ) : (
+        <>
+          <G.Container>
+            {groups.map((item) => (
+              <GroupCard
+                key={item.id}
+                id={item.id}
+                img={item.img}
+                day={item.day}
+                isPublic={item.isPublic}
+                title={item.title}
+                content={item.content}
+                badge={item.badge}
+                memory={item.memory}
+                like={item.like}
+              />
+            ))}
+          </G.Container>
+          <More />
+        </>
+      )}
     </>
   );
 }

@@ -5,8 +5,8 @@ export const Tab = styled.div`
   height: 45px;
   border-radius: 22.5px;
 
-  background-color: ${(props) => (props.state ? '#282828' : 'none')};
-  color: ${(props) => (props.state ? '#fafafa' : '#282828')};
+  background-color: ${({ isActive }) => (isActive ? '#282828' : 'none')};
+  color: ${({ isActive }) => (isActive ? '#fafafa' : '#282828')};
 
   font-size: 14px;
   font-weight: 700;

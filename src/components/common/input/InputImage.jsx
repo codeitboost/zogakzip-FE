@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import * as I from './InputImage.style';
 
-export default function InputImage({ title }) {
+export default function InputImage({ title, onImageChange }) {
   const [fileName, setFileName] = useState('');
   const fileInputRef = useRef(null);
 
@@ -13,6 +13,11 @@ export default function InputImage({ title }) {
     const file = event.target.files[0];
     if (file) {
       setFileName(file.name);
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        onImageChange(reader.result);
+      };
+      reader.readAsDataURL(file);
     }
   };
 
