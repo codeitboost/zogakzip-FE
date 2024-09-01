@@ -7,7 +7,7 @@ import CommentUploadModal from '../commentuploadmodal/CommentUploadModal';
 import MemoryDeleteModal from '../memorydeletemodal/MemoryDeleteModal';
 import CommentEditModal from '../commenteditmodal/CommentEditModal';
 
-export default function MemoryCommentItem({ id, name, date, children, password, onEdit }) {
+export default function MemoryCommentItem({ id, name, date, children, password, editComment }) {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
@@ -15,6 +15,11 @@ export default function MemoryCommentItem({ id, name, date, children, password, 
   const openDeleteModal = () => setIsDeleteModalOpen(true);
   const closeEditModal = () => setIsEditModalOpen(false);
   const closeDeleteModal = () => setIsDeleteModalOpen(false);
+
+  const handleEdit = (updatedName, updatedComment) => {
+    console.log('Editing:', id, updatedName, updatedComment);
+    editComment(id, updatedName, updatedComment);
+  };
 
   return (
     <M.Container>
@@ -36,10 +41,11 @@ export default function MemoryCommentItem({ id, name, date, children, password, 
       <M.Line />
       <Modal isOpen={isEditModalOpen} onClose={closeEditModal} title="댓글 수정">
         <CommentEditModal
+          id={id}
           commentName={name}
           commentText={children}
           commentPassword={password}
-          onEdit={onEdit}
+          onEdit={handleEdit}
           closeModal={closeEditModal}
         />
       </Modal>

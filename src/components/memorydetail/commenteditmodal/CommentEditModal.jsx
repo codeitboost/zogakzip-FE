@@ -4,7 +4,7 @@ import InputText from '../../common/input/InputText';
 import TextArea from '../../common/input/TextArea';
 import * as C from './CommentEditModal.style';
 
-export default function CommentEditModal({ commentName, commentText, commentPassword, onEdit, closeModal }) {
+export default function CommentEditModal({ id, commentName, commentText, commentPassword, onEdit, closeModal }) {
   const [name, setName] = useState(commentName);
   const [comment, setComment] = useState(commentText);
   const [password, setPassword] = useState('');
@@ -17,7 +17,8 @@ export default function CommentEditModal({ commentName, commentText, commentPass
   const handleSubmit = () => {
     console.log(password, commentPassword);
     if (password === commentPassword) {
-      onEdit(name, comment); // 수정 기능을 부모 컴포넌트에 전달
+      console.log('Submitting Edit:', id, name, comment);
+      onEdit(name, comment);
       closeModal();
     } else {
       setIsPasswordValid(false);

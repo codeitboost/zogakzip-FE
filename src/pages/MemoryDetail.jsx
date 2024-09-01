@@ -15,11 +15,21 @@ export default function MemoryDetail() {
     ]);
   };
 
+  const editComment = (id, updatedName, updatedComment) => {
+    setComments((prevComments) =>
+      prevComments.map((comment) =>
+        comment.id === id
+          ? { ...comment, name: updatedName, comment: updatedComment, date: new Date().toLocaleString() }
+          : comment,
+      ),
+    );
+  };
+
   return (
     <div>
       <MemoryInfo />
       <MemoryContent addComment={addComment} />
-      <MemoryComment comments={comments} />
+      <MemoryComment comments={comments} editComment={editComment} />
     </div>
   );
 }
