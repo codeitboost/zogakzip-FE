@@ -1,12 +1,12 @@
+import { useContext } from 'react';
 import * as G from './GroupList.style';
-
 import Button from '../../components/common/button/Button';
 import Menu from '../../components/grouplist/menu/Menu';
 import Tab from '../../components/common/tab/Tab';
 import GroupCard from '../../components/grouplist/groupcard/GroupCard';
-
 import card5 from '../../assets/img/card/card5.png';
 import More from '../../components/common/more/More';
+import { GroupContext } from '../../components/groupcreate/GroupContext';
 
 const data = [
   {
@@ -139,12 +139,13 @@ const data = [
 ];
 
 export default function GroupList() {
+  const { groups } = useContext(GroupContext);
+
   return (
     <>
-      {/* <Button text="그룹 만들기" width="200px" height="45px" fontsize="14px" /> */}
       <Menu />
       <G.Container>
-        {data.map((item) => (
+        {groups.map((item) => (
           <GroupCard
             key={item.id}
             id={item.id}
