@@ -25,11 +25,15 @@ export default function MemoryDetail() {
     );
   };
 
+  const deleteComment = (id) => {
+    setComments((prevComments) => prevComments.filter((comment) => comment.id !== id));
+  };
+
   return (
     <div>
       <MemoryInfo />
       <MemoryContent addComment={addComment} />
-      <MemoryComment comments={comments} editComment={editComment} />
+      <MemoryComment comments={comments} editComment={editComment} deleteComment={deleteComment} />
     </div>
   );
 }

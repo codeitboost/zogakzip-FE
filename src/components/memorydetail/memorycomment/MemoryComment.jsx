@@ -2,7 +2,7 @@ import { useState } from 'react';
 import * as M from './MemoryComment.style';
 import MemoryCommentItem from '../momorycommentitem/MemoryCommentItem';
 
-export default function MemoryComment({ comments, editComment }) {
+export default function MemoryComment({ comments, editComment, deleteComment }) {
   return (
     <M.Container>
       <div>댓글 {comments.length}</div>
@@ -15,6 +15,7 @@ export default function MemoryComment({ comments, editComment }) {
           date={comment.date}
           password={comment.password}
           editComment={editComment}
+          deleteComment={deleteComment}
         >
           {comment.comment}
         </MemoryCommentItem>

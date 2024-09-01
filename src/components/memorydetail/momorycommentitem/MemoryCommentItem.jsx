@@ -3,11 +3,10 @@ import * as M from './MemoryCommentItem.style';
 import editIcon from '../../../assets/img/edit.svg';
 import deleteIcon from '../../../assets/img/delete.svg';
 import Modal from '../../common/modal/Modal';
-import CommentUploadModal from '../commentuploadmodal/CommentUploadModal';
-import MemoryDeleteModal from '../memorydeletemodal/MemoryDeleteModal';
 import CommentEditModal from '../commenteditmodal/CommentEditModal';
+import CommentDeleteModal from '../commentdeletemodal/CommentDeleteModal';
 
-export default function MemoryCommentItem({ id, name, date, children, password, editComment }) {
+export default function MemoryCommentItem({ id, name, date, children, password, editComment, deleteComment }) {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
@@ -19,6 +18,10 @@ export default function MemoryCommentItem({ id, name, date, children, password, 
   const handleEdit = (updatedName, updatedComment) => {
     console.log('Editing:', id, updatedName, updatedComment);
     editComment(id, updatedName, updatedComment);
+  };
+
+  const handleDelete = () => {
+    deleteComment(id);
   };
 
   return (
@@ -50,7 +53,7 @@ export default function MemoryCommentItem({ id, name, date, children, password, 
         />
       </Modal>
       <Modal isOpen={isDeleteModalOpen} onClose={closeDeleteModal} title="댓글 삭제">
-        <MemoryDeleteModal />
+        <CommentDeleteModal commentPassword={password} deleteComment={handleDelete} closeModal={closeDeleteModal} />
       </Modal>
     </M.Container>
   );
