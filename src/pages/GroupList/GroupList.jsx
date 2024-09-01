@@ -7,6 +7,7 @@ import GroupCard from '../../components/grouplist/groupcard/GroupCard';
 import card5 from '../../assets/img/card/card5.png';
 import More from '../../components/common/more/More';
 import { GroupContext } from '../../components/groupcreate/GroupContext';
+import NoGroupList from './NoGroupList';
 
 const data = [
   {
@@ -144,23 +145,29 @@ export default function GroupList() {
   return (
     <>
       <Menu />
-      <G.Container>
-        {groups.map((item) => (
-          <GroupCard
-            key={item.id}
-            id={item.id}
-            img={item.img}
-            day={item.day}
-            isPublic={item.isPublic}
-            title={item.title}
-            content={item.content}
-            badge={item.badge}
-            memory={item.memory}
-            like={item.like}
-          />
-        ))}
-      </G.Container>
-      <More />
+      {groups.length === 0 ? (
+        <NoGroupList />
+      ) : (
+        <>
+          <G.Container>
+            {groups.map((item) => (
+              <GroupCard
+                key={item.id}
+                id={item.id}
+                img={item.img}
+                day={item.day}
+                isPublic={item.isPublic}
+                title={item.title}
+                content={item.content}
+                badge={item.badge}
+                memory={item.memory}
+                like={item.like}
+              />
+            ))}
+          </G.Container>
+          <More />
+        </>
+      )}
     </>
   );
 }
