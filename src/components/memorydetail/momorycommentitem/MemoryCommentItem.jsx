@@ -3,11 +3,10 @@ import * as M from './MemoryCommentItem.style';
 import editIcon from '../../../assets/img/edit.svg';
 import deleteIcon from '../../../assets/img/delete.svg';
 import Modal from '../../common/modal/Modal';
-import CommentUploadModal from '../commentuploadmodal/CommentUploadModal';
-import MemoryDeleteModal from '../memorydeletemodal/MemoryDeleteModal';
 import CommentEditModal from '../commenteditmodal/CommentEditModal';
+import CommentDeleteModal from '../commentdeletemodal/CommentDeleteModal';
 
-export default function MemoryCommentItem({ id, name, date, children, password, onEdit }) {
+export default function MemoryCommentItem({ id, name, date, children, password, editComment, deleteComment }) {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
@@ -15,6 +14,15 @@ export default function MemoryCommentItem({ id, name, date, children, password, 
   const openDeleteModal = () => setIsDeleteModalOpen(true);
   const closeEditModal = () => setIsEditModalOpen(false);
   const closeDeleteModal = () => setIsDeleteModalOpen(false);
+
+  const handleEdit = (updatedName, updatedComment) => {
+    console.log('Editing:', id, updatedName, updatedComment);
+    editComment(id, updatedName, updatedComment);
+  };
+
+  const handleDelete = () => {
+    deleteComment(id);
+  };
 
   return (
     <M.Container>
@@ -36,15 +44,16 @@ export default function MemoryCommentItem({ id, name, date, children, password, 
       <M.Line />
       <Modal isOpen={isEditModalOpen} onClose={closeEditModal} title="댓글 수정">
         <CommentEditModal
+          id={id}
           commentName={name}
           commentText={children}
           commentPassword={password}
-          onEdit={onEdit}
+          onEdit={handleEdit}
           closeModal={closeEditModal}
         />
       </Modal>
       <Modal isOpen={isDeleteModalOpen} onClose={closeDeleteModal} title="댓글 삭제">
-        <MemoryDeleteModal />
+        <CommentDeleteModal commentPassword={password} deleteComment={handleDelete} closeModal={closeDeleteModal} />
       </Modal>
     </M.Container>
   );
