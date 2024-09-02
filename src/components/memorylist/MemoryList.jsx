@@ -29,13 +29,14 @@ export default function MemoryList() {
                   key={item.id}
                   id={item.id}
                   img={item.img}
-                  day={item.day}
+                  name={item.name}
                   isPublic={item.isPublic}
                   title={item.title}
-                  content={item.content}
-                  badge={item.badge}
-                  memory={item.memory}
+                  tags={item.tags}
+                  location={item.location}
+                  date={item.date}
                   like={item.like}
+                  comment={item.comment}
                 />
               ))}
             </Masonry>
