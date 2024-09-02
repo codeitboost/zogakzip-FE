@@ -12,6 +12,7 @@ export default function MemoryList() {
 
   return (
     <>
+      <M.Title>추억 목록</M.Title>
       <Menu type="추억" />
       {memories.length === 0 ? (
         <NoMemoryList />

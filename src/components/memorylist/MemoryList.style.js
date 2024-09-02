@@ -1,5 +1,16 @@
 import styled from 'styled-components';
 
+export const Title = styled.div`
+  margin-top: 130px;
+  margin-bottom: 67px;
+
+  color: #282828;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.72px;
+`;
+
 export const Container = styled.div`
   width: 1560px;
   max-height: 1400px;
