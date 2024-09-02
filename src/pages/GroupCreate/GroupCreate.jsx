@@ -12,12 +12,14 @@ export default function GroupCreate() {
   const navigate = useNavigate();
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
+  const [content, setContent] = useState('');
   const [image, setImage] = useState('');
   const [isPublic, setIsPublic] = useState(false);
   const { addGroup } = useContext(GroupContext);
 
   const handleNameChange = (e) => setName(e.target.value);
   const handlePasswordChange = (e) => setPassword(e.target.value);
+  const handleContentChange = (e) => setContent(e.target.value);
 
   const handleImageChange = (imageUrl) => {
     setImage(imageUrl);
@@ -34,7 +36,7 @@ export default function GroupCreate() {
       day: 0, // 기본값 설정
       isPublic, // 필요에 따라 처리
       title: name,
-      content: '', // 필요에 따라 처리
+      content, // 필요에 따라 처리
       badge: 0, // 기본값 설정
       memory: 0, // 기본값 설정
       like: '0', // 기본값 설정
@@ -50,7 +52,9 @@ export default function GroupCreate() {
         그룹 이름을 입력해 주세요
       </InputText>
       <InputImage title="대표 이미지" onImageChange={handleImageChange} />
-      <TextArea title="그룹 소개">그룹을 소개해 주세요</TextArea>
+      <TextArea title="그룹 소개" value={content} onChange={handleContentChange}>
+        그룹을 소개해 주세요
+      </TextArea>
       <ToggleMenu title="그룹 공개 선택" onToggleChange={handleToggleChange} />
       <InputText title="비밀번호" value={password} onChange={handlePasswordChange}>
         비밀번호를 입력해 주세요
