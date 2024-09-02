@@ -1,30 +1,30 @@
 import { useContext } from 'react';
 import Masonry from 'react-masonry-css';
-import * as G from './GroupList.style';
-import Menu from '../../components/grouplist/menu/Menu';
-import GroupCard from '../../components/grouplist/groupcard/GroupCard';
-import More from '../../components/common/more/More';
-import { GroupContext } from '../../components/groupcreate/GroupContext';
-import NoGroupList from './NoGroupList';
+import { MemoryContext } from '../../pages/memoryupload/MemoryContext';
+import MemoryCard from './MemoryCard';
+import * as M from './MemoryList.style';
+import Menu from '../grouplist/menu/Menu';
+import More from '../common/more/More';
+import NoMemoryList from './NoMemoryList';
 
-export default function GroupList() {
-  const { groups } = useContext(GroupContext);
+export default function MemoryList() {
+  const { memories } = useContext(MemoryContext);
 
   return (
     <>
-      <Menu type="그룹" />
-      {groups.length === 0 ? (
-        <NoGroupList />
+      <Menu type="추억" />
+      {memories.length === 0 ? (
+        <NoMemoryList />
       ) : (
         <>
-          <G.Container>
+          <M.Container>
             <Masonry
               breakpointCols={4} // 열 개수
               className="my-masonry-grid"
               columnClassName="my-masonry-grid_column"
             >
-              {groups.map((item) => (
-                <GroupCard
+              {memories.map((item) => (
+                <MemoryCard
                   key={item.id}
                   id={item.id}
                   img={item.img}
@@ -38,7 +38,7 @@ export default function GroupList() {
                 />
               ))}
             </Masonry>
-          </G.Container>
+          </M.Container>
           <More />
         </>
       )}
