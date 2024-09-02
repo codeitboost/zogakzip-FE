@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Button from '../../components/common/button/Button';
 import InputImage from '../../components/common/input/InputImage';
 import InputTag from '../../components/common/input/tag/InputTag';
@@ -12,6 +12,7 @@ import { MemoryContext } from './MemoryContext';
 export default function MemoryUpload() {
   const navigate = useNavigate();
   const { addMemory } = useContext(MemoryContext);
+  const { id } = useParams();
 
   const [name, setName] = useState('');
   const [title, setTitle] = useState('');
@@ -53,7 +54,7 @@ export default function MemoryUpload() {
       comment: 0,
     };
     addMemory(newMemory);
-    navigate('/group-detail');
+    navigate(`/group-detail/${id}`);
   };
 
   return (
