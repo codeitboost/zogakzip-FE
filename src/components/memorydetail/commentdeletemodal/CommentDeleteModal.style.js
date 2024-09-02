@@ -6,4 +6,10 @@ export const Container = styled.div`
 
 export const Error = styled.div`
   color: red;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.42px;
+
+  position: relative;
+  bottom: 35px;
 `;
