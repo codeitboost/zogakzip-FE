@@ -37,7 +37,12 @@ export default function Menu({ type }) {
           <Tab text="공개" isActive={activeTab === 'public'} onClick={() => handleTabClick('public')} />
           <Tab text="비공개" isActive={activeTab === 'private'} onClick={() => handleTabClick('private')} />
         </M.Tab>
-        <Search placeholder="그룹명을 검색해 주세요" />
+        {type === '그룹' ? (
+          <Search placeholder="그룹명을 검색해 주세요" />
+        ) : (
+          <Search placeholder="태그 혹은 제목을 입력해 주세요" />
+        )}
+
         <Dropdown />
       </M.Menu>
     </M.Container>
