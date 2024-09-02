@@ -5,7 +5,7 @@ import GroupDetail from './pages/GroupDetail';
 import MemoryUpload from './pages/memoryupload/MemoryUpload';
 import MemoryDetail from './pages/MemoryDetail';
 import Header from './components/common/header/Header';
-import GroupAccess from './pages/groupacess/GroupAccess';
+import GroupAccess from './pages/groupaccess/GroupAccess';
 
 function App() {
   return (
