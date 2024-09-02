@@ -12,7 +12,7 @@ export default function GroupList() {
 
   return (
     <>
-      <Menu />
+      <Menu type="그룹" />
       {groups.length === 0 ? (
         <NoGroupList />
       ) : (

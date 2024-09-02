@@ -6,12 +6,15 @@ import Search from '../../common/search/Search';
 import Tab from '../../common/tab/Tab';
 import * as M from './Menu.style';
 
-export default function Menu() {
+export default function Menu({ type }) {
   const [activeTab, setActiveTab] = useState('public'); // 'public' 또는 'private'
 
   const navigate = useNavigate();
   const handleGroupCreate = () => {
     navigate('/group-create');
+  };
+  const handleMemoryUpload = () => {
+    navigate('/memory-upload');
   };
 
   const handleTabClick = (tabType) => {
@@ -20,9 +23,15 @@ export default function Menu() {
 
   return (
     <M.Container>
-      <M.Button onClick={handleGroupCreate}>
-        <Button text="그룹 만들기" width="200px" height="45px" fontsize="14px" />
-      </M.Button>
+      {type === '그룹' ? (
+        <M.Button onClick={handleGroupCreate}>
+          <Button text="그룹 만들기" width="200px" height="45px" fontsize="14px" />
+        </M.Button>
+      ) : (
+        <M.Button onClick={handleMemoryUpload}>
+          <Button text="추억 올리기" width="200px" height="45px" fontsize="14px" />
+        </M.Button>
+      )}
       <M.Menu>
         <M.Tab>
           <Tab text="공개" isActive={activeTab === 'public'} onClick={() => handleTabClick('public')} />
