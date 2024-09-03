@@ -11,7 +11,7 @@ import MemoryEditModal from '../memoryeditmodal/MemoryEditModal';
 
 export default function MemoryInfo() {
   const { id } = useParams(); // URL에서 id 추출
-  const { memories } = useContext(MemoryContext);
+  const { memories, setMemories } = useContext(MemoryContext);
 
   const selectedMemory = memories.find((memory) => memory.id === id);
 
@@ -22,6 +22,12 @@ export default function MemoryInfo() {
   const openDeleteModal = () => setIsDeleteModalOpen(true);
   const closeEditModal = () => setIsEditModalOpen(false);
   const closeDeleteModal = () => setIsDeleteModalOpen(false);
+
+  const updateMemory = (updatedMemory) => {
+    setMemories((prevMemories) =>
+      prevMemories.map((memory) => (memory.id === updatedMemory.id ? updatedMemory : memory)),
+    );
+  };
 
   return (
     <M.Container>
@@ -64,7 +70,7 @@ export default function MemoryInfo() {
       </M.Bottom>
       <M.Line />
       <Modal isOpen={isEditModalOpen} onClose={closeEditModal} title="추억 수정">
-        <MemoryEditModal />
+        <MemoryEditModal selectedMemory={selectedMemory} closeModal={closeEditModal} onUpdateMemory={updateMemory} />
       </Modal>
       <Modal isOpen={isDeleteModalOpen} onClose={closeDeleteModal} title="추억 삭제">
         <MemoryDeleteModal />

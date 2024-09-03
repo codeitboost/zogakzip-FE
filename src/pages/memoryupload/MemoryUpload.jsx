@@ -54,6 +54,7 @@ export default function MemoryUpload() {
       date,
       like: 0,
       comment: 0,
+      password,
     };
     addMemory(newMemory);
     console.log(newMemory.date);

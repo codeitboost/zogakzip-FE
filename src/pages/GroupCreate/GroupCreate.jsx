@@ -33,7 +33,7 @@ export default function GroupCreate() {
     const newGroup = {
       id: Date.now(), // 간단한 ID 생성
       img: image, // 필요시 이미지 URL 처리
-      day: 0, // 기본값 설정
+      day: 1, // 기본값 설정
       isPublic, // 필요에 따라 처리
       title: name,
       content, // 필요에 따라 처리

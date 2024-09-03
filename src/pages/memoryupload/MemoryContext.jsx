@@ -13,6 +13,7 @@ export function MemoryProvider({ children }) {
     () => ({
       memories,
       addMemory,
+      setMemories,
     }),
     [memories],
   );
