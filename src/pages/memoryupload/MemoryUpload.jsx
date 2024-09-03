@@ -41,7 +41,7 @@ export default function MemoryUpload() {
 
   const handleSubmit = () => {
     const newMemory = {
-      id: Date.now(), // 간단한 ID 생성
+      id: Date.now().toString(), // 간단한 ID 생성
       groupId: id,
       name,
       title,
