@@ -1,11 +1,17 @@
+import { useNavigate } from 'react-router-dom';
 import * as M from './MemoryCard.style';
 import image from '../../assets/img/card/card3.png';
 import likeIcon from '../../assets/img/logo/logo_like.svg';
 import commentIcon from '../../assets/img/comment.svg';
 
 export default function MemoryCard({ id, img, name, isPublic, title, tags, location, date, like, comment }) {
+  const navigate = useNavigate();
+  const handleMemoryDetail = () => {
+    navigate(`/memory-detail/${id}`);
+  };
+
   return (
-    <M.Container>
+    <M.Container onClick={handleMemoryDetail}>
       <M.Image src={img} alt="thumb" />
       <M.Top>
         <M.Name>{name}</M.Name>

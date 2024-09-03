@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { useParams } from 'react-router-dom';
 import Masonry from 'react-masonry-css';
 import { MemoryContext } from '../../pages/memoryupload/MemoryContext';
 import MemoryCard from './MemoryCard';
@@ -9,12 +10,15 @@ import NoMemoryList from './NoMemoryList';
 
 export default function MemoryList() {
   const { memories } = useContext(MemoryContext);
+  const { id } = useParams();
+
+  const groupMemories = memories.filter((memory) => memory.groupId === id);
 
   return (
     <>
       <M.Title>추억 목록</M.Title>
       <Menu type="추억" />
-      {memories.length === 0 ? (
+      {groupMemories.length === 0 ? (
         <NoMemoryList />
       ) : (
         <>
@@ -24,7 +28,7 @@ export default function MemoryList() {
               className="my-masonry-grid"
               columnClassName="my-masonry-grid_column"
             >
-              {memories.map((item) => (
+              {groupMemories.map((item) => (
                 <MemoryCard
                   key={item.id}
                   id={item.id}

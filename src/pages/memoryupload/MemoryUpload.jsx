@@ -42,6 +42,7 @@ export default function MemoryUpload() {
   const handleSubmit = () => {
     const newMemory = {
       id: Date.now(), // 간단한 ID 생성
+      groupId: id,
       name,
       title,
       img: image,
@@ -54,6 +55,7 @@ export default function MemoryUpload() {
       comment: 0,
     };
     addMemory(newMemory);
+    console.log(newMemory.groupId);
     navigate(`/group-detail/${id}`);
   };
 
