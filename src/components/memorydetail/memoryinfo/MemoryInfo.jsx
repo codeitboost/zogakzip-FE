@@ -39,7 +39,7 @@ export default function MemoryInfo() {
         <M.Info>
           <M.Writer>{selectedMemory.name}</M.Writer>
           <div>|</div>
-          <M.Public>{selectedMemory.isPublic}</M.Public>
+          <M.Public>{selectedMemory.isPublic ? '공개' : '비공개'}</M.Public>
         </M.Info>
         <M.Menu>
           <M.Edit onClick={openEditModal}>추억 수정하기</M.Edit>
