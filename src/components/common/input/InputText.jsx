@@ -9,7 +9,7 @@ export default function InputText({ title, children, value, onChange }) {
     onChange(event); // 부모 컴포넌트의 상태 업데이트를 호출합니다.
 
     // 유효성 검사
-    const regex = /^[a-zA-Z0-9ㄱ-힣ㄱ-ㅎㅏ-ㅣ!@#$%^_]*$/;
+    const regex = /^[a-zA-Z0-9ㄱ-힣ㄱ-ㅎㅏ-ㅣ!@#$%^_ ]*$/;
     if (regex.test(newValue)) {
       setIsValid(true);
     } else {

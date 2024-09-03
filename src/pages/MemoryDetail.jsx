@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import MemoryComment from '../components/memorydetail/memorycomment/MemoryComment';
 import MemoryContent from '../components/memorydetail/memorycontent/MemoryContent';
 import MemoryInfo from '../components/memorydetail/memoryinfo/MemoryInfo';
+import { MemoryContext } from './memoryupload/MemoryContext';
 
 const generateId = () => `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
 
