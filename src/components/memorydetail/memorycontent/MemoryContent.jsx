@@ -20,7 +20,7 @@ export default function MemoryContent({ addComment }) {
 
   return (
     <M.Container>
-      <M.Image src={selectedMemory.img} alt="memory" />
+      {selectedMemory.img && <M.Image src={selectedMemory.img} alt="memory" />}
       <M.Content>{selectedMemory.content}</M.Content>
       <Button text="댓글 등록하기" onClick={openUploadModal} />
       <Modal isOpen={isUploadModalOpen} onClose={closeUploadModal} title="댓글 등록">

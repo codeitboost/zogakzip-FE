@@ -12,7 +12,7 @@ export default function MemoryCard({ id, img, name, isPublic, title, tags, locat
 
   return (
     <M.Container onClick={handleMemoryDetail}>
-      <M.Image src={img} alt="thumb" />
+      {img && <M.Image src={img} alt="thumb" />}
       <M.Top>
         <M.Name>{name}</M.Name>
         <div>|</div>
