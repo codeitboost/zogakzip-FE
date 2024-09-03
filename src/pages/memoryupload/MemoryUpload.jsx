@@ -56,7 +56,7 @@ export default function MemoryUpload() {
       comment: 0,
     };
     addMemory(newMemory);
-    console.log(newMemory.groupId);
+    console.log(newMemory.date);
     navigate(`/group-detail/${id}`);
   };
 
@@ -82,7 +82,7 @@ export default function MemoryUpload() {
       <M.Row>
         <InputImage title="이미지" onImageChange={handleImageChange} />
         <M.Line />
-        <InputDate value={date} />
+        <InputDate value={date} onChange={handleDateChange} />
       </M.Row>
       <M.Row>
         <TextArea title="본문" value={content} onChange={handleContentChange}>
