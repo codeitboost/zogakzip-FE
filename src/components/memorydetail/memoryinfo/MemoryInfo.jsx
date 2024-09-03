@@ -29,6 +29,10 @@ export default function MemoryInfo() {
     );
   };
 
+  const deleteMemory = (deleteId) => {
+    setMemories((prevMemories) => prevMemories.filter((memory) => memory.id !== deleteId));
+  };
+
   return (
     <M.Container>
       <M.Top>
@@ -73,7 +77,7 @@ export default function MemoryInfo() {
         <MemoryEditModal selectedMemory={selectedMemory} closeModal={closeEditModal} onUpdateMemory={updateMemory} />
       </Modal>
       <Modal isOpen={isDeleteModalOpen} onClose={closeDeleteModal} title="추억 삭제">
-        <MemoryDeleteModal />
+        <MemoryDeleteModal selectedMemory={selectedMemory} onDeleteMemory={deleteMemory} />
       </Modal>
     </M.Container>
   );

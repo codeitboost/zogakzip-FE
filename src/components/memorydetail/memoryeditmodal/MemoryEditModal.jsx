@@ -39,7 +39,6 @@ export default function MemoryEditModal({ selectedMemory, closeModal, onUpdateMe
   const handleSubmit = () => {
     if (password !== selectedMemory.password) {
       setIsPasswordValid(false);
-      console.log(password, selectedMemory.password);
     } else {
       const updatedMemory = {
         ...selectedMemory,
