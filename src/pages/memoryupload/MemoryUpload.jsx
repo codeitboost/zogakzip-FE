@@ -8,6 +8,7 @@ import TextArea from '../../components/common/input/TextArea';
 import ToggleMenu from '../../components/common/toggle/ToggleMenu';
 import * as M from './MemoryUpload.style';
 import { MemoryContext } from './MemoryContext';
+import InputDate from '../../components/common/input/InputDate';
 
 export default function MemoryUpload() {
   const navigate = useNavigate();
@@ -81,9 +82,7 @@ export default function MemoryUpload() {
       <M.Row>
         <InputImage title="이미지" onImageChange={handleImageChange} />
         <M.Line />
-        <InputText title="추억의 순간" value={date} onChange={handleDateChange}>
-          추억의 순간을 입력해 주세요
-        </InputText>
+        <InputDate value={date} />
       </M.Row>
       <M.Row>
         <TextArea title="본문" value={content} onChange={handleContentChange}>
