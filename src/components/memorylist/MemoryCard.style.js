@@ -11,7 +11,6 @@ export const Container = styled.div`
 
 export const Image = styled.img`
   width: 335px;
-  height: 335px;
 
   border-radius: 6px;
 
