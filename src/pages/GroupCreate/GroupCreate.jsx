@@ -31,7 +31,7 @@ export default function GroupCreate() {
 
   const handleSubmit = () => {
     const newGroup = {
-      id: Date.now(), // 간단한 ID 생성
+      id: Date.now().toString(), // 간단한 ID 생성
       img: image, // 필요시 이미지 URL 처리
       day: 1, // 기본값 설정
       isPublic, // 필요에 따라 처리
@@ -40,6 +40,7 @@ export default function GroupCreate() {
       badge: 0, // 기본값 설정
       memory: 0, // 기본값 설정
       like: '0', // 기본값 설정
+      password,
     };
     addGroup(newGroup);
     navigate('/');
