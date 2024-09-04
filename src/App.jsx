@@ -15,9 +15,9 @@ function App() {
         <Route path="/" element={<GroupList />} />
         <Route path="/group-create" element={<GroupCreate />} />
         <Route path="/group-detail/:id" element={<GroupDetail />} />
-        <Route path="/memory-upload" element={<MemoryUpload />} />
-        <Route path="/memory-detail" element={<MemoryDetail />} />
-        <Route path="/group-access" element={<GroupAccess />} />
+        <Route path="/memory-upload/:id" element={<MemoryUpload />} />
+        <Route path="/memory-detail/:id" element={<MemoryDetail />} />
+        <Route path="/group-access/:id" element={<GroupAccess />} />
       </Routes>
     </BrowserRouter>
   );

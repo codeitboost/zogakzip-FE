@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Button from '../../common/button/Button';
 import Dropdown from '../../common/dropdown/Dropdown';
 import Search from '../../common/search/Search';
@@ -8,13 +8,14 @@ import * as M from './Menu.style';
 
 export default function Menu({ type }) {
   const [activeTab, setActiveTab] = useState('public'); // 'public' 또는 'private'
+  const { id } = useParams();
 
   const navigate = useNavigate();
   const handleGroupCreate = () => {
     navigate('/group-create');
   };
   const handleMemoryUpload = () => {
-    navigate('/memory-upload');
+    navigate(`/memory-upload/${id}`);
   };
 
   const handleTabClick = (tabType) => {

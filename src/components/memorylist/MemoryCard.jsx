@@ -1,33 +1,40 @@
+import { useNavigate } from 'react-router-dom';
 import * as M from './MemoryCard.style';
 import image from '../../assets/img/card/card3.png';
 import likeIcon from '../../assets/img/logo/logo_like.svg';
 import commentIcon from '../../assets/img/comment.svg';
 
-export default function MemoryCard() {
+export default function MemoryCard({ id, img, name, isPublic, title, tags, location, date, like, comment }) {
+  const navigate = useNavigate();
+  const handleMemoryDetail = () => {
+    navigate(`/memory-detail/${id}`);
+  };
+
   return (
-    <M.Container>
-      <M.Image src={image} alt="thumb" />
+    <M.Container onClick={handleMemoryDetail}>
+      {img && <M.Image src={img} alt="thumb" />}
       <M.Top>
-        <M.Name>달봉이 아들</M.Name>
+        <M.Name>{name}</M.Name>
         <div>|</div>
-        <M.Public>공개</M.Public>
+        <M.Public>{isPublic ? '공개' : '비공개'}</M.Public>
       </M.Top>
       <M.Middle>
-        <M.Title>인천 앞바다에서 무려 60cm 월척을 낚다!</M.Title>
-        <M.Tags>#인천 #낚시</M.Tags>
+        <M.Title>{title}</M.Title>
+        <M.Tags>{tags}</M.Tags>
       </M.Middle>
       <M.Bottom>
         <M.Info>
-          <M.Location>인천 앞바다</M.Location>
-          <M.Date>· 24.01.19 18:00</M.Date>
+          <M.Location>{location}</M.Location>
+          <M.Date>· {date}</M.Date>
         </M.Info>
         <M.Count>
           <M.Like>
             <img src={likeIcon} alt="like" />
-            120
+            {like}
           </M.Like>
           <M.Comment>
-            <img src={commentIcon} alt="comment" />8
+            <img src={commentIcon} alt="comment" />
+            {comment}
           </M.Comment>
         </M.Count>
       </M.Bottom>

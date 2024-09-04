@@ -28,3 +28,13 @@ export const LastLine = styled.div`
 export const Button = styled.div`
   margin-top: 10px;
 `;
+
+export const Error = styled.div`
+  color: red;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.42px;
+
+  position: relative;
+  bottom: 35px;
+`;
