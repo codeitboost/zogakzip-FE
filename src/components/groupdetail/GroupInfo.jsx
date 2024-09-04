@@ -1,5 +1,6 @@
+// GroupInfo.jsx
 import { useParams } from 'react-router-dom';
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { GroupContext } from '../groupcreate/GroupContext';
 import * as G from './GroupInfo.style';
 import Like from '../common/like/Like';
@@ -8,7 +9,27 @@ export default function GroupInfo() {
   const { id } = useParams();
   const { groups } = useContext(GroupContext);
 
-  const selectedGroup = groups.find((group) => group.id === id);
+  // selectedGroup을 상태로 관리
+  const [selectedGroup, setSelectedGroup] = useState(null);
+
+  // 그룹 찾기 및 초기화
+  useEffect(() => {
+    const foundGroup = groups.find((group) => group.id === id);
+    setSelectedGroup(foundGroup);
+  }, [groups, id]);
+
+  // selectedGroup이 없을 경우 처리
+  if (!selectedGroup) {
+    return <div>그룹을 찾을 수 없습니다.</div>;
+  }
+
+  // 그룹의 상태를 업데이트하기 위한 함수
+  const handleLike = () => {
+    setSelectedGroup((prevGroup) => ({
+      ...prevGroup,
+      like: prevGroup.like + 1, // 공감 수 1 증가
+    }));
+  };
 
   return (
     <div>
@@ -38,7 +59,7 @@ export default function GroupInfo() {
           </G.Middle>
           <G.Content>{selectedGroup.content}</G.Content>
           <G.Bottom>
-            <Like />
+            <Like onLike={handleLike} /> {/* 공감 증가 함수 전달 */}
           </G.Bottom>
         </G.Info>
       </G.Container>

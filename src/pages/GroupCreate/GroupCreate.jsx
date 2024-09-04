@@ -39,7 +39,7 @@ export default function GroupCreate() {
       content, // 필요에 따라 처리
       badge: 0, // 기본값 설정
       memory: 0, // 기본값 설정
-      like: '0', // 기본값 설정
+      like: 0, // 기본값 설정
       password,
     };
     addGroup(newGroup);
