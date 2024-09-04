@@ -6,7 +6,11 @@ import logo from '../../../assets/img/logo/logo16.svg';
 export default function GroupCard({ id, img, day, isPublic, title, content, badge, memory, like }) {
   const navigate = useNavigate();
   const handleGroupDetail = () => {
-    navigate(`/group-detail/${id}`);
+    if (isPublic) {
+      navigate(`/group-detail/${id}`);
+    } else {
+      navigate(`/group-access/${id}`);
+    }
   };
 
   return (
