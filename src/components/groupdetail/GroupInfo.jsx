@@ -20,8 +20,8 @@ export default function GroupInfo() {
               <div>D+{selectedGroup.day}</div>|<div>{selectedGroup.isPublic ? '공개' : '비공개'}</div>
             </G.TopLeft>
             <G.TopRight>
-              <div>그룹 정보 수정하기</div>
-              <div>그룹 삭제하기</div>
+              <G.Edit>그룹 정보 수정하기</G.Edit>
+              <G.Delete>그룹 삭제하기</G.Delete>
             </G.TopRight>
           </G.Top>
           <G.Middle>

@@ -104,3 +104,18 @@ export const Bottom = styled.div`
     margin: 0;
   }
 `;
+
+export const Edit = styled.div`
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.42px;
+`;
+
+export const Delete = styled.div`
+  color: #8d8d8d;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.42px;
+`;
